@@ -1,7 +1,14 @@
 import { navLinks, Logo } from '../data/constants'
 import { SunIcon, MoonIcon } from '../icons'
+import { Theme } from '../App'
+import type { FC } from 'react'
 
-export default function Header({ theme, toggleTheme }) {
+type HeaderProps = {
+  theme: Theme
+  toggleTheme: () => void
+}
+
+const Header: FC<HeaderProps> = ({ theme, toggleTheme }) => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-bg/80 backdrop-blur-sm border-b border-border">
       <nav className="container mx-auto flex items-center justify-between h-14 px-8">
@@ -33,3 +40,5 @@ export default function Header({ theme, toggleTheme }) {
     </header>
   )
 }
+
+export default Header

@@ -1,16 +1,20 @@
-export function GitHubIcon({ className }) {
+type IconProps = {
+  className?: string
+}
+
+export function GitHubIcon({ className }: IconProps) {
   return (
     <img src="/github.svg" alt="GitHub" className={className} />
   )
 }
 
-export function LinkedInIcon({ className }) {
+export function LinkedInIcon({ className }: IconProps) {
   return (
     <img src="/linkedin.png" alt="LinkedIn" className={className} />
   )
 }
 
-export function EmailIcon({ className }) {
+export function EmailIcon({ className }: IconProps) {
   return (
     <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -18,7 +22,7 @@ export function EmailIcon({ className }) {
   )
 }
 
-export function SunIcon({ className }) {
+export function SunIcon({ className }: IconProps) {
   return (
     <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v2m0 14v2m8.66-10H19m-4.34 0l1.34 2.68M6.34 12l1.34-2.68M4 12h2.34m8.36 4.34L12 16m-4.34 0l-1.34 2.68M12 7v2m0 6v2" />
@@ -26,7 +30,7 @@ export function SunIcon({ className }) {
   )
 }
 
-export function MoonIcon({ className }) {
+export function MoonIcon({ className }: IconProps) {
   return (
     <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path strokeLinecap="round" strokeLinejoin="round" d="M21 12.79A9 9 0 0111.21 3a7 7 0 008.79 9.79z" />
@@ -35,7 +39,7 @@ export function MoonIcon({ className }) {
   )
 }
 
-export function Logo({ className }) {
+export function Logo({ className }: IconProps) {
   return (
     <svg className={className} viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
       <rect x="4" y="4" width="40" height="40" rx="8" className="stroke-current" strokeWidth="2" />

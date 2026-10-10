@@ -1,6 +1,51 @@
+import { ComponentType } from 'react'
 import { GitHubIcon, LinkedInIcon, EmailIcon, Logo } from '../icons'
 
-export const navLinks = [
+export type IconProps = {
+  className?: string
+}
+
+export type Icon = ComponentType<IconProps>
+
+export type NavLink = {
+  label: string
+  href: string
+}
+
+export type SocialLink = {
+  label: string
+  href: string
+  icon: Icon
+}
+
+export type SkillCategory = {
+  category: string
+  items: string[]
+}
+
+export type Experience = {
+  role: string
+  company: string
+  period: string
+  location: string
+  description: string[]
+}
+
+export type Project = {
+  title: string
+  description: string
+  tech: string[]
+  repoUrl: string
+}
+
+export type EducationEntry = {
+  institution: string
+  degree: string
+  period: string
+  description: string
+}
+
+export const navLinks: NavLink[] = [
   { label: 'About', href: '#about' },
   { label: 'Skills', href: '#skills' },
   { label: 'Experience', href: '#experience' },
@@ -9,7 +54,7 @@ export const navLinks = [
   { label: 'Contact', href: '#contact' },
 ]
 
-export const socialLinks = [
+export const socialLinks: SocialLink[] = [
   {
     label: 'GitHub',
     href: 'https://github.com/markoechevarria',
@@ -29,7 +74,7 @@ export const socialLinks = [
 
 export { Logo }
 
-export const skillCategories = [
+export const skillCategories: SkillCategory[] = [
   {
     category: 'Data Engineering',
     items: ['Apache Airflow', 'PySpark', 'Databricks', 'DataHub', 'Pandas', 'NumPy', 'Scikit-Learn', 'Power BI'],
@@ -57,10 +102,10 @@ export const skillCategories = [
   {
     category: 'Mobile',
     items: ['Kotlin', 'Jetpack Compose'],
-  }
+  },
 ]
 
-export const experiences = [
+export const experiences: Experience[] = [
   {
     role: 'Freelance Data Engineer',
     company: 'Freelance',
@@ -97,7 +142,7 @@ export const experiences = [
   },
 ]
 
-export const projects = [
+export const projects: Project[] = [
   {
     title: 'AURORA',
     description:
@@ -170,7 +215,7 @@ export const projects = [
   },
 ]
 
-export const education = [
+export const education: EducationEntry[] = [
   {
     institution: 'Universidad Nacional Mayor de San Marcos',
     degree: 'Bachelor of Systems Engineering (10th semester)',

@@ -9,9 +9,11 @@ import Education from './components/Education'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 
+export type Theme = 'dark' | 'light'
+
 function App() {
-  const [theme, setTheme] = useState(() => {
-    return localStorage.getItem('theme') || 'dark'
+  const [theme, setTheme] = useState<Theme>(() => {
+    return (localStorage.getItem('theme') || 'dark') as Theme
   })
 
   useEffect(() => {
